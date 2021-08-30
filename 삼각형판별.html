@@ -1,0 +1,28 @@
+<!--
+  삼각형의 조건 - 두개의 짧은 선의 합이 가장 긴 선보다 길어야한다.
+                  (같거나 짧으면 안된다.)
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function solution(a, b, c) {
+      let answer = "YES", max;
+      let sum = a + b + c;
+      if (a > b) max = a;
+      else max = b;
+      if (c > max) max = c;
+      if (sum - max >= max) answer = "NO";
+      return answer;
+    }
+
+    console.log(solution(4, 2, 7));
+  </script>
+</body>
+
+</html>
