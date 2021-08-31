@@ -1,0 +1,27 @@
+<!--
+  7개의 수가 주어지면 그 숫자 중 가장 작은 수를 출력하는 프로그램을 작성하라.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function solution(...arg) {
+      let answer = arg[0];
+      for (let i = 0; i < arg.length; i++) {
+        if (answer >= arg[i]) {
+          answer = arg[i];
+        }
+      }
+      return answer;
+    }
+    alert(solution(8, 2, 4, -3, 6));
+    //Number.MAX_SAFE_INTEGER;를 사용할수도 있다.
+  </script>
+</body>
+
+</html>
