@@ -12,6 +12,7 @@
   <script>
     function solution(...arg) {
       let answer = arg[0];
+      //Number.MAX_SAFE_INTEGER;를 사용할수도 있다.
       for (let i = 0; i < arg.length; i++) {
         if (answer >= arg[i]) {
           answer = arg[i];
@@ -20,7 +21,15 @@
       return answer;
     }
     alert(solution(8, 2, 4, -3, 6));
-    //Number.MAX_SAFE_INTEGER;를 사용할수도 있다.
+
+    //내장함수를 이용한 최솟값 구하기
+    // function solution1(arr) {
+    //   let answer = Math.min(...arr);
+    //   return answer;
+    // }
+
+    // let arr = [4, 2, 5, 6, 7];
+    // console.log(solution1(arr))
   </script>
 </body>
 
